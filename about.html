@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Rashqt — background, skills, work experience, projects, and education.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rafolio.github.io/folio/about.html">
+<meta name="theme-color" content="#f6efe0">
+<title>About Rashqt — Developer & Creator</title>
+
+<meta property="og:site_name" content="Rashqt">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Rashqt — Developer & Creator">
+<meta property="og:description" content="About Rashqt — background, skills, work experience, projects, and education.">
+<meta property="og:url" content="https://rafolio.github.io/folio/about.html">
+<meta property="og:image" content="https://rafolio.github.io/folio/assets/favicon/favicon-512.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Rashqt — Developer & Creator">
+<meta name="twitter:description" content="About Rashqt — background, skills, work experience, projects, and education.">
+<meta name="twitter:image" content="https://rafolio.github.io/folio/assets/favicon/favicon-512.png">
+
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Page-specific additions for about.html only — social profile cards + fixed-width slideshow wrapper.
+     Everything else on this page reuses existing shared classes from style.css. -->
+<style>
+  .social-card{align-items:flex-start; text-align:left;}
+  .social-avatar{
+    width:52px; height:52px; border-radius:50%; overflow:hidden; margin-bottom:14px;
+    background:var(--bg-soft); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0;
+  }
+  .social-avatar img{width:100%; height:100%; object-fit:cover; display:block;}
+  .social-card h3{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  .social-card p{margin:6px 0 10px;}
+  .social-card:hover .arrow-link::after{margin-left:6px;}
+  .social-card--disabled{opacity:.55; cursor:not-allowed;}
+  .social-card--disabled:hover{transform:none !important; box-shadow:none !important; border-color:var(--line) !important;}
+  .mini-collage-wrap{width:240px; flex-shrink:0;}
+  @media(max-width:600px){ .mini-collage-wrap{width:100%; max-width:280px; margin:0 auto;} }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="cursor-glow" id="glow"></div>
+
+<nav class="top"><div class="container navrow">
+  <a class="logo" href="index.html">Rash<span>qt</span></a>
+  <div class="nav-group">
+    <div class="navlinks">
+      <a href="index.html">Home</a><a href="about.html" class="active">About</a>
+      <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
+      <a href="#education">Education</a><a href="index.html#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">🌙</button>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
+  <a href="#education">Education</a><a href="index.html#contact">Contact</a>
+</div>
+
+<header class="hero page-hero" id="about">
+  <div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div>
+  <div class="container hero-inner">
+    <div class="pill-row">
+      <span class="pill"><span class="dot"></span> Open to work</span>
+      <span class="pill">Ranchi, Jharkhand, India</span>
+    </div>
+    <h1 class="page-title">Hey. I'm Rash. I make things <em>that matter.</em></h1>
+    <p class="lede" style="margin-top:18px;"><em>Gen Z developer, creator, and writer.</em> This is my corner of the internet — not curated for an algorithm, just blogs, projects, and late-night thoughts that feel <strong>human, honest, and a little slow.</strong></p>
+    <div class="buttons" style="margin-top:8px;">
+      <a class="btn primary" href="blog.html">Read the blog <span class="arrow">→</span></a>
+      <a class="btn ghost" href="index.html#contact">Say hello <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="about-body"><div class="container about-grid">
+  <div class="reveal"><div class="eyebrow">Background</div><h2 class="section-title">A bit more about me</h2></div>
+  <div class="reveal">
+    <p>Hands-on across data entry, KYC compliance, and web development — with a habit of picking up new tools fast and shipping real things instead of just talking about them.</p>
+    <div class="strengths">
+      <span class="tag">Fast Learner</span><span class="tag">Self-Taught</span><span class="tag">Adaptable</span>
+      <span class="tag">Detail-Oriented</span><span class="tag">Problem Solver</span><span class="tag">Organized</span>
+      <span class="tag">Research-Oriented</span><span class="tag">Independent Worker</span><span class="tag">Continuous Learner</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="story"><div class="container">
+  <div class="reveal"><div class="eyebrow">01 / Story</div><h2 class="section-title">How I got here</h2></div>
+  <div class="grid2">
+    <div class="card reveal"><span class="tag-mini">👋 The Beginning</span><h3>A desk and a dream</h3><p>A laptop, bad wifi, and way too many YouTube tabs — just trying to make something that was mine.</p></div>
+    <div class="card reveal"><span class="tag-mini">💻 Learning to Code</span><h3>Out of frustration</h3><p>I couldn't execute my ideas, so I taught myself HTML, then CSS, then everything after.</p></div>
+    <div class="card reveal"><span class="tag-mini">🌱 Creating Publicly</span><h3>Terrifying, necessary</h3><p>My first post was bad. I left it up anyway — that's when I actually started improving.</p></div>
+    <div class="card reveal"><span class="tag-mini">🌙 Where I Am Now</span><h3>Building slowly</h3><p>600+ newsletter readers, a blog that's reached strangers, and projects that finally feel like mine.</p></div>
+  </div>
+</div></section>
+
+<section id="writing-about"><div class="container">
+  <div class="reveal"><div class="eyebrow">02 / Writing</div><h2 class="section-title">Also, I write</h2></div>
+  <div class="book-card reveal">
+    <div class="book-cover"><img src="assets/uncrossed-paths-cover.jpg" alt="Uncrossed Paths book cover"></div>
+    <div class="book-info">
+      <p>Under the name <strong>Rashqt</strong>, I wrote and published a novel — <a href="uncrossed-paths.html" style="color:var(--cyan); font-weight:600;">Uncrossed Paths</a>. My real name's <strong>Rashid Ahmad</strong>; both live here.</p>
+      <a class="btn ghost" href="uncrossed-paths.html">Read Uncrossed Paths <span class="arrow">→</span></a>
+    </div>
+  </div>
+</div></section>
+
+<section id="chess"><div class="container">
+  <div class="reveal"><div class="eyebrow">03 / Chess</div><h2 class="section-title">♟️ I also play chess</h2></div>
+  <div class="book-card reveal">
+    <div class="mini-collage-wrap">
+      <figure class="collage-card" style="margin:0;">
+        <div class="collage collage-3">
+          <img src="assets/gallery/chess.jpeg" alt="Chess photo 1" loading="lazy" style="animation-delay:0s;">
+          <img src="assets/gallery/chess2.jpeg" alt="Chess photo 2" loading="lazy" style="animation-delay:4s;">
+          <img src="assets/gallery/chess3.jpeg" alt="Chess photo 3" loading="lazy" style="animation-delay:8s;">
+        </div>
+      </figure>
+    </div>
+    <div class="book-info">
+      <span class="tag" style="color:var(--lime); border-color:rgba(215,255,63,.35);">~1846 rating</span>
+      <p style="margin-top:14px;">Former chess club member, still playing for the love of it — no algorithm, no audience, just the game.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container">
+  <div class="reveal"><div class="eyebrow">04 / Skills</div><h2 class="section-title">What I work with</h2></div>
+  <div class="grid2">
+    <div class="card reveal"><h3>Web Development</h3><p>HTML5, CSS3, JavaScript, AngularJS, Node.js, MySQL, REST API Integration, Responsive &amp; Mobile-First Design, Git/GitHub, GitHub Pages, Netlify</p></div>
+    <div class="card reveal"><h3>Programming &amp; Data</h3><p>Python, NumPy, Pandas, C++, JSON, YAML, Debugging, Technical Research</p></div>
+    <div class="card reveal"><h3>Data &amp; Operations</h3><p>Data Entry, Data Processing, Documentation, Online Research, Spreadsheet Management, Record Keeping, Quality Assurance, Task Coordination</p></div>
+    <div class="card reveal"><h3>AI &amp; Productivity</h3><p>ChatGPT, Claude, Gemini, Microsoft Copilot, Codex, Perplexity AI, Notion AI, Grammarly</p></div>
+    <div class="card reveal"><h3>Software &amp; Collaboration</h3><p>Excel, Word, PowerPoint, Google Workspace, Notion, Trello, Slack, Zoom, Google Meet, Microsoft Teams, Canva</p></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="container">
+  <div class="reveal"><div class="eyebrow">05 / Experience</div><h2 class="section-title">Work experience</h2></div>
+  <div class="timeline">
+    <div class="role reveal">
+      <div class="meta">1 YEAR</div><h3>Banking KYC Data Entry Executive</h3>
+      <ul><li>Reviewed, verified, and entered customer KYC documentation according to banking compliance standards.</li>
+      <li>Maintained accuracy across large volumes of sensitive financial records.</li>
+      <li>Organized and cross-checked documentation, flagging discrepancies to support process reliability.</li></ul>
+    </div>
+    <div class="role reveal">
+      <div class="meta">6 MONTHS</div><h3>Mortgage Data Entry Associate</h3>
+      <ul><li>Processed mortgage-related documentation with close attention to accuracy and compliance.</li>
+      <li>Maintained organized digital records for efficient retrieval and reporting.</li>
+      <li>Collaborated with team members to complete data processing tasks on time.</li></ul>
+    </div>
+    <div class="role reveal">
+      <div class="meta">FREELANCE</div><h3>Web Developer — Business Website</h3>
+      <ul><li>Built and shipped 6 websites total, from client business sites to personal projects — handling design, development, and deployment for each one.</li>
+      <li>Gathered client requirements and translated them into a functional website plan.</li>
+      <li>Built responsive UI/UX with HTML, CSS, and JavaScript; integrated backend functionality.</li>
+      <li>Tested, deployed, hosted, and handled ongoing revisions and maintenance for the client.</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="kyc-story"><div class="container">
+  <div class="reveal"><div class="eyebrow">06 / More on KYC</div><h2 class="section-title">🚀 Youngest in the room</h2></div>
+  <div class="book-card reveal">
+    <div class="mini-collage-wrap">
+      <figure class="collage-card" style="margin:0;">
+        <div class="collage collage-3">
+          <img src="assets/gallery/kyc.jpeg" alt="KYC workplace photo 1" loading="lazy" style="animation-delay:0s;">
+          <img src="assets/gallery/kyyc.jpeg" alt="KYC workplace photo 2" loading="lazy" style="animation-delay:4s;">
+          <img src="assets/gallery/kyycc.jpeg" alt="KYC workplace photo 3" loading="lazy" style="animation-delay:8s;">
+        </div>
+      </figure>
+    </div>
+    <div class="book-info">
+      <span class="tag">19 years old</span> <span class="tag">Team Lead</span> <span class="tag">Hybrid</span>
+      <p style="margin-top:14px;">Youngest in the room at 19 — leading a team of 20-somethings as a hybrid Banking KYC exec. Had to earn it, not assume it.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="container">
+  <div class="reveal"><div class="eyebrow">07 / Projects</div><h2 class="section-title">Things I've built</h2></div>
+  <div class="grid2">
+    <div class="card project reveal"><span class="tag-mini">Client work</span><h3>Business Website Development</h3><p>Built and deployed a full client-facing business website, handling design, development, and hosting end-to-end.</p></div>
+    <div class="card project reveal"><span class="tag-mini">Automation</span><h3>Discord Bot Development</h3><p>Designed and built a custom Discord bot, applying programming logic and API integration to automate community functions.</p></div>
+    <div class="card project reveal"><span class="tag-mini">Browser tools</span><h3>Chrome Extension Development</h3><p>Developed a browser extension from concept to functionality using JavaScript and frontend engineering skills.</p></div>
+    <div class="card project reveal"><span class="tag-mini">Personal</span><h3>Portfolio Website</h3><p>Designed, built, and deployed a personal portfolio site to showcase projects and technical skills.</p></div>
+    <div class="card project reveal"><span class="tag-mini">AI workflows</span><h3>AI Productivity Systems</h3><p>Designed and tested AI-assisted workflows for research, documentation, content production, and faster learning.</p></div>
+  </div>
+</div></section>
+
+<section id="education"><div class="container">
+  <div class="reveal"><div class="eyebrow">08 / Education</div><h2 class="section-title">Education</h2></div>
+  <div class="grid2">
+    <div class="card reveal"><h3>Class 12th — Science (PCM + CS)</h3><p>Vivekananda Vidya Mandir School, Ranchi, Jharkhand · 2023–24</p></div>
+    <div class="card reveal"><h3>B.Tech — AI &amp; Machine Learning</h3><p>2025–Present · Currently in 2nd year</p></div>
+  </div>
+</div></section>
+
+<section id="connect"><div class="container">
+  <div class="reveal"><div class="eyebrow">09 / Connect</div><h2 class="section-title">Find me elsewhere</h2></div>
+  <div class="grid3">
+    <a class="card social-card reveal" href="https://instagram.com/rashqt.x" target="_blank" rel="noopener">
+      <div class="social-avatar"><img src="assets/gallery/raa.jpeg" alt="Rashqt.x Instagram profile picture"></div>
+      <h3>Rashqt.x</h3>
+      <p>Random moments & the creator journey.</p>
+      <span class="arrow-link">Instagram →</span>
+    </a>
+    <div class="card social-card social-card--disabled reveal" aria-disabled="true" title="Discord invite link coming soon">
+      <div class="social-avatar social-avatar--icon">💬</div>
+      <h3>Rashqtx <span class="coming-soon-badge">Add invite link</span></h3>
+      <p>Come say hi — let's actually talk.</p>
+      <span class="arrow-link">Discord →</span>
+    </div>
+    <a class="card social-card reveal" href="https://www.youtube.com/@Rashqt" target="_blank" rel="noopener">
+      <div class="social-avatar social-avatar--icon">▶️</div>
+      <h3>Rashqt</h3>
+      <p>Gaming clips & creator content.</p>
+      <span class="arrow-link">YouTube →</span>
+    </a>
+    <a class="card social-card reveal" href="https://github.com/Rashqtx" target="_blank" rel="noopener">
+      <div class="social-avatar social-avatar--icon">💻</div>
+      <h3>Rashqt</h3>
+      <p>Projects, experiments, actual code.</p>
+      <span class="arrow-link">GitHub →</span>
+    </a>
+    <a class="card social-card reveal" href="mailto:workforrash@gmail.com">
+      <div class="social-avatar social-avatar--icon">✉️</div>
+      <h3>Rashqt</h3>
+      <p>Work, collabs, or just hello.</p>
+      <span class="arrow-link">Email →</span>
+    </a>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="cta-band reveal">
+    <div>
+      <h2 class="big-cta cta-band-title">Let's work together.</h2>
+      <p style="color:var(--muted); margin-top:8px;">Head back to the homepage to reach out, or check out my writing and blog.</p>
+      <div class="buttons" style="margin-top:20px;">
+        <a class="btn primary" href="index.html#contact">Get in touch <span class="arrow">→</span></a>
+        <a class="btn ghost" href="index.html">Back to home</a>
+      </div>
+    </div>
+    <div class="newsletter-box">
+      <div class="eyebrow">Newsletter</div>
+      <h3>Get new posts by email</h3>
+      <p>Occasional notes on data, compliance, and code. No spam.</p>
+      <form class="newsletter-form" data-newsletter>
+        <input type="email" required placeholder="you@email.com" aria-label="Email address">
+        <button class="btn primary" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-status" aria-live="polite"></p>
+    </div>
+  </div>
+</div></section>
+
+<footer class="site-footer"><div class="container footer-grid">
+  <a class="footer-brand" href="index.html">Rash<span>qt</span></a>
+  <p class="footer-copy">© 2025 Rashqt. Made with care in the late hours.</p>
+  <div class="footer-social">
+    <a href="https://www.youtube.com/@Rashqt" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l6 3-6 3z" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://www.instagram.com/rashqt.x/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://discord.com/users/1288874094934097920" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 4.5c-2.8.6-4.6 1.8-4.6 1.8S2 9 2 15c0 0 1.7 1.9 5.3 2.1l.9-1.4c-1.5-.4-2.3-1-2.3-1s.2.1.5.3c2 1 4.4 1.5 6.6 1.5s4.6-.5 6.6-1.5c.3-.2.5-.3.5-.3s-.8.6-2.3 1l.9 1.4c3.6-.2 5.3-2.1 5.3-2.1 0-6-1.4-8.7-1.4-8.7S18.8 5.1 16 4.5l-.3.7c1.7.5 2.7 1.1 2.7 1.1a15 15 0 0 0-13 0s1-.6 2.7-1.1L8 4.5z"/><circle cx="9" cy="12" r="1.3"/><circle cx="15" cy="12" r="1.3"/></svg></a>
+    <a href="#" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.9 10.5 21 3h-2l-6.1 6.5L8 3H3l7.4 10.2L3 21h2l6.5-6.9L17.5 21H21z"/></svg></a>
+  </div>
+</div></footer>
+
+<script src="script.js"></script>
+<!-- Page-specific fallback for about.html only: gracefully handle chess/KYC/Instagram images
+     that haven't been added yet, instead of showing broken image icons. -->
+<script>
+document.querySelectorAll('.collage img, .social-avatar img').forEach(function(img){
+  img.addEventListener('error', function(){
+    var collage = img.closest('.collage');
+    var avatar = img.closest('.social-avatar');
+    if(collage){
+      if(collage.dataset.fallbackApplied) return;
+      collage.dataset.fallbackApplied = 'true';
+      collage.style.display = 'flex';
+      collage.style.alignItems = 'center';
+      collage.style.justifyContent = 'center';
+      collage.style.background = 'var(--grad)';
+      collage.innerHTML = '<span style="font-family:\'JetBrains Mono\',monospace; font-size:.72rem; color:#0a0a0f; font-weight:600; opacity:.85; text-align:center; padding:0 12px;">Add photos</span>';
+    } else if(avatar){
+      avatar.textContent = '👤';
+    }
+  }, { once: true });
+});
+</script>
+</body>
+</html>
