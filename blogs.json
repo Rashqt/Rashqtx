@@ -70,6 +70,25 @@
     "sharePath": "#post-deko"
   },
   {
+    "id": "post-plans",
+    "date": "September 2025",
+    "category": "Personal",
+    "title": "My Current Plans",
+    "excerpt": "What's next: finishing the novel, writing more often, and a few things I'm still figuring out.",
+    "image": "assets/gallery/plans.jpg",
+    "status": "published",
+    "content": [
+      "I've been sitting on this blog for a while without posting an actual life update, so here's one. Nothing dramatic, just where things stand right now.",
+      "Uncrossed Paths is still my main project outside of work. I'm slowly working through the next chapters. If you've already read what's out, thank you, genuinely.",
+      "Work-wise, I'm still doing KYC compliance during the day and building things at night. That balance is annoying sometimes, but it's also the only reason this site exists at all.",
+      "On the blog side, I want to write more often instead of letting drafts sit for months. Fewer perfectly polished posts, more actual thoughts.",
+      "That's about it. No five-year plan, just trying to keep making things I'd actually want to read or use myself."
+    ],
+    "likes": 0,
+    "sharePath": "#post-plans",
+    "type": "update"
+  },
+  {
     "id": "post-kakashi",
     "date": "May 13, 2025",
     "category": "Personal",
