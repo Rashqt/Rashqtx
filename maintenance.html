@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This part of Rashqt is temporarily down for maintenance.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#faf6ee">
+<title>Be right back — Rashqt</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .maint-wrap{
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:40px 20px; position:relative; overflow:hidden;
+  }
+  .maint-wrap .blob{position:absolute; border-radius:50%; filter:blur(90px); opacity:var(--blob-op);}
+  .maint-logo{font-family:'Unbounded',sans-serif; font-weight:700; font-size:1.2rem; margin-bottom:40px; position:relative; z-index:2;}
+  .maint-logo span{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .maint-wrap h1{
+    font-family:'Unbounded',sans-serif; font-weight:800; font-size:clamp(2rem,5vw,3rem);
+    margin-bottom:16px; position:relative; z-index:2; letter-spacing:-.02em;
+  }
+  .maint-wrap p{color:var(--muted); max-width:440px; font-size:1.02rem; line-height:1.7; margin-bottom:32px; position:relative; z-index:2;}
+  .maint-toggle{position:fixed; top:20px; right:20px; z-index:5;}
+
+  .maint-progress-wrap{width:100%; max-width:300px; position:relative; z-index:2; margin-bottom:34px;}
+  .maint-progress-bar{width:100%; height:7px; border-radius:999px; background:var(--bg-soft); overflow:hidden; border:1px solid var(--line);}
+  .maint-progress-fill{height:100%; width:0%; border-radius:999px; background:var(--grad); animation:maintLoad 5s ease-in-out infinite;}
+  @keyframes maintLoad{
+    0%{width:2%;}
+    50%{width:76%;}
+    75%{width:91%;}
+    90%{width:96%;}
+    100%{width:2%;}
+  }
+  .maint-status{
+    margin-top:12px; font-family:'JetBrains Mono',monospace; font-size:.76rem; color:var(--muted);
+    letter-spacing:.03em; transition:opacity .4s ease, transform .4s ease;
+  }
+  .maint-status.fade{opacity:0; transform:translateY(4px);}
+  @media(prefers-reduced-motion:reduce){
+    .maint-progress-fill{animation:none; width:60%;}
+    .maint-status{transition:none;}
+  }
+</style>
+</head>
+<body>
+<button class="theme-toggle maint-toggle" id="themeToggle" aria-label="Toggle light/dark mode">🌙</button>
+
+<div class="maint-wrap">
+  <div class="blob blob1" style="width:420px; height:420px; background:var(--violet); top:-140px; left:-100px;"></div>
+  <div class="blob blob2" style="width:380px; height:380px; background:var(--cyan); bottom:-120px; right:-100px;"></div>
+
+  <a class="maint-logo" href="index.html">Rash<span>qt</span></a>
+  <h1>Be right back.</h1>
+  <p>Something on this page is getting rebuilt. I'll have it sorted soon, probably at 2am like most things on this site.</p>
+
+  <div class="maint-progress-wrap">
+    <div class="maint-progress-bar"><div class="maint-progress-fill"></div></div>
+    <p class="maint-status" id="maintStatus">rebuilding stuff</p>
+  </div>
+
+  <a class="btn primary" href="index.html">Back to homepage <span class="arrow">→</span></a>
+</div>
+
+<script src="script.js"></script>
+<script>
+  var statuses = [
+    'rebuilding stuff',
+    'definitely almost done',
+    'fixing one thing, breaking two more',
+    'this will probably work',
+    'debugging at 2am, as usual'
+  ];
+  var i = 0;
+  var el = document.getElementById('maintStatus');
+  if(el && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    setInterval(function(){
+      el.classList.add('fade');
+      setTimeout(function(){
+        i = (i + 1) % statuses.length;
+        el.textContent = statuses[i];
+        el.classList.remove('fade');
+      }, 400);
+    }, 3200);
+  }
+</script>
+</body>
+</html>
