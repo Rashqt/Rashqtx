@@ -220,10 +220,11 @@ if(blogPreviewGrid){
   loadBlogs().then(()=>{
     blogPreviewGrid.innerHTML = BLOGS.slice(0, 3).map(post=>{
       const isSoon = post.status === 'coming-soon';
+      const isUpdate = post.type === 'update';
       return `
-      <a class="card blog-card reveal" href="blog.html#${post.id}">
+      <a class="card blog-card${isUpdate ? ' blog-card--update' : ''} reveal" href="blog.html#${post.id}">
         ${post.image ? `<div class="blog-card-image"><img src="${post.image}" alt="${post.title}" loading="lazy"></div>` : ''}
-        <span class="blog-date mono">${post.category} · ${post.date}</span>
+        <span class="blog-date mono">${isUpdate ? 'Personal update' : post.category} · ${post.date}</span>
         <h3>${post.title}</h3>
         ${isSoon
           ? `<div style="margin-top:10px;"><span class="coming-soon-badge">Coming soon</span></div>`
@@ -251,10 +252,11 @@ if(blogFullGrid){
 
   function cardHTML(post){
     const isSoon = post.status === 'coming-soon';
+    const isUpdate = post.type === 'update';
     return `
-      <div class="card blog-card reveal" data-blog-id="${post.id}" style="cursor:pointer;">
+      <div class="card blog-card${isUpdate ? ' blog-card--update' : ''} reveal" data-blog-id="${post.id}" style="cursor:pointer;">
         ${post.image ? `<div class="blog-card-image"><img src="${post.image}" alt="${post.title}" loading="lazy"></div>` : ''}
-        <span class="blog-date mono">${post.category} · ${post.date}</span>
+        <span class="blog-date mono">${isUpdate ? 'Personal update' : post.category} · ${post.date}</span>
         <h3>${post.title}</h3>
         ${isSoon
           ? `<div style="margin-top:10px;"><span class="coming-soon-badge">Coming soon</span></div>`
