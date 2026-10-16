@@ -510,3 +510,24 @@ document.querySelectorAll('.newsletter-form').forEach(form=>{
     form.reset();
   });
 });
+
+/* Boot loader */
+(function(){
+  const el=document.getElementById('bootLoader'); if(!el) return;
+  const box=document.getElementById('bootLines');
+  const lines=['booting rashqt...','loading late-night thoughts...','fixing one thing, breaking two more...','ready.'];
+  document.body.style.overflow='hidden';
+  let i=0;
+  function finish(){
+    el.classList.add('done'); document.body.style.overflow='';
+    try{sessionStorage.setItem('boot-seen','1');}catch(e){}
+    setTimeout(()=>el.remove(),600);
+  }
+  function next(){
+    if(i>=lines.length){ setTimeout(finish,350); return; }
+    const d=document.createElement('div'); d.className='boot-line'+(i<lines.length-1?' ok':''); d.textContent=lines[i++];
+    box.appendChild(d); setTimeout(next,330);
+  }
+  next();
+  setTimeout(finish,3000);
+})();
