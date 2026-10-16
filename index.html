@@ -55,6 +55,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="bootLoader" class="boot-loader" aria-hidden="true">
+  <div class="boot-term"><div class="boot-lines" id="bootLines"></div><span class="boot-cursor"></span></div>
+</div>
+<script>try{if(sessionStorage.getItem('boot-seen')||matchMedia('(prefers-reduced-motion: reduce)').matches){document.getElementById('bootLoader').remove();}}catch(e){}</script>
+
 <div class="progress" id="progress"></div>
 <div class="cursor-glow" id="glow"></div>
 
@@ -92,7 +97,7 @@
     <div class="buttons">
       <a class="btn primary" href="projects.html">View projects <span class="arrow">→</span></a>
       <a class="btn ghost" href="mailto:workforrash@gmail.com">Say hi <span class="arrow">↗</span></a>
-      <a class="btn ghost" href="https://portfolio-amber-delta-70.vercel.app/" target="_blank" rel="noopener">Portfolio <span class="arrow">↗</span></a>
+      <a class="btn ghost" href="about.html">More about me</a>
     </div>
   </div>
 </header>
