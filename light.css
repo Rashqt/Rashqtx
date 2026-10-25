@@ -1,6 +1,8 @@
 /* light.css - NEW light theme. Every rule is scoped to html[data-theme="light"].
    Only unscoped rule: .lm-deco{display:none}
-.project-img{display:block;width:100%;height:auto;border-radius:14px;margin:0 0 16px} (new decorative elements, hidden in dark). */
+.card.project.eon{position:relative}
+.card.project.eon .project-img{position:absolute;top:20px;right:20px;width:56px;height:56px;object-fit:cover;border-radius:12px;margin:0}
+.card.project.eon h3{padding-right:72px} (new decorative elements, hidden in dark). */
 .lm-deco{display:none}
 html[data-theme="light"]{--ice:#E6ECF4;--aubergine:#1E0B25;--aubergine-2:#4A2155;--marigold:#FFB000;
   --bg:#E6ECF4;--bg-soft:#D9E1EC;--card:#E6ECF4;--text:#1E0B25;--muted:#4A2155;--line:rgba(30,11,37,.2);
