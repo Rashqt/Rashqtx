@@ -1,5 +1,6 @@
 /* light.css - NEW light theme. Every rule is scoped to html[data-theme="light"].
-   Only unscoped rule: .lm-deco{display:none} (new decorative elements, hidden in dark). */
+   Only unscoped rule: .lm-deco{display:none}
+.project-img{display:block;width:100%;height:auto;border-radius:14px;margin:0 0 16px} (new decorative elements, hidden in dark). */
 .lm-deco{display:none}
 html[data-theme="light"]{--ice:#E6ECF4;--aubergine:#1E0B25;--aubergine-2:#4A2155;--marigold:#FFB000;
   --bg:#E6ECF4;--bg-soft:#D9E1EC;--card:#E6ECF4;--text:#1E0B25;--muted:#4A2155;--line:rgba(30,11,37,.2);
